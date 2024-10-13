@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma</title>
+  <!-- Fonte Montserrat para um visual moderno e clean -->
+  <link rel="stylesheet" href="assets/css/teste.css">
+  <link rel="stylesheet" href="assets/css/plataforma.css">
+  <link rel="stylesheet" href="assets/css/config.css">
+  <link rel="stylesheet" href="('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-5">Plataforma Versátil</h2>
+    <div class="row text-center justify-content-center">
+      <!-- Coluna 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="caixa-recurso fade-in">
+          <img src="marketing-consulting-concept-illustration_114360-9047-removebg-preview.png" alt="Imagem Placeholder" class="imagem-placeholder">
+          <h3>Site com a sua marca</h3>
+          <p>Personalize seu site e comece a vender agora</p>
+        </div>
+      </div>
+      <!-- Coluna 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="caixa-recurso fade-in">
+          <img src="concept-online-courses_118813-632-removebg-preview.png" alt="Imagem Placeholder" class="imagem-placeholder">
+          <h3>Transferência Rápida</h3>
+          <p>Integre com Mercado Pago, PayPal ou PagSeguro</p>
+        </div>
+      </div>
+      <!-- Coluna 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="caixa-recurso fade-in">
+          <img src="business-reputation-online-service-platform-building-relationship-improving-customer-loyalty-rating-feedback-online-course-vector-illustration_613284-718-removebg-preview.png" alt="Imagem Placeholder" class="imagem-placeholder">
+          <h3>Disponibilize seus cursos</h3>
+          <p>Produza seu conteúdo e organize tudo em um único espaço</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Função para adicionar animação quando o usuário rolar até os elementos
+    document.addEventListener("DOMContentLoaded", function() {
+      var recursos = document.querySelectorAll('.caixa-recurso');
+      var options = {
+        threshold: 0.5 // Quando 50% do elemento estiver visível
+      };
+
+      var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, options);
+
+      recursos.forEach(recurso => {
+        observer.observe(recurso);
+      });
+    });
+  </script>
+</body>
+</html>
